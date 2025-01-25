@@ -1,0 +1,25 @@
+.tabs-container {
+    text-transform: lowercase;
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 100%;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.tabs-container div {
+    padding: 15px;
+    background: #FFFFFF;
+    border: 1px solid #DFE5EC;
+    text-align: center;
+}
+
+.tabs-container div:first-child {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.tabs-container div:last-child {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}

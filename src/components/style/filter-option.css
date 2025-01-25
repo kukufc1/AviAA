@@ -1,0 +1,9 @@
+.filter-option {
+    cursor: pointer;
+    display: flex;
+    padding: 10px;
+}
+
+.filter-option:hover {
+    background-color: #F1FCFF;
+}

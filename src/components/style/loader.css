@@ -1,0 +1,10 @@
+.loader {
+    margin: 50px auto;
+    animation: opacity-animation 1.5s infinite ease-in-out;
+}
+
+@keyframes opacity-animation {
+    from {opacity: 1;}
+    50% {opacity: 0.5;}
+    to {opacity: 1;}
+}
