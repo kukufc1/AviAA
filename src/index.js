@@ -1,9 +1,8 @@
 import React from 'react';
-import { createRoot } from 'react-dom/client'; // Обновленный импорт
+import { createRoot } from 'react-dom/client';
 import { Provider } from 'react-redux';
 import createSagaMiddleware from 'redux-saga';
-// import { composeWithDevTools } from 'redux-devtools-extension';
-import { configureStore } from '@reduxjs/toolkit'; // Импортируйте configureStore
+import { configureStore } from '@reduxjs/toolkit';
 
 import './index.css';
 import 'regenerator-runtime/runtime';
@@ -21,20 +20,17 @@ const defaultState = {
 
 const sagaMiddleware = createSagaMiddleware();
 
-// Используйте configureStore вместо createStore
 const store = configureStore({
   reducer,
   preloadedState: defaultState,
-  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(sagaMiddleware), // Добавьте сагу в middleware
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(sagaMiddleware),
 });
 
 sagaMiddleware.run(rootSaga);
 
-// Создайте корень с помощью createRoot из 'react-dom/client'
 const container = document.getElementById('root');
-const root = createRoot(container); // Инициализация корня
+const root = createRoot(container);
 
-// Рендеринг приложения с помощью root.render вместо ReactDOM.render
 root.render(
   <Provider store={store}>
     <App />
